@@ -1,0 +1,25 @@
+.navbar {
+  font-family: var(--primary-font);
+  font-weight: 500;
+  font-size: 14px;
+  color: var(--primary-color);
+  ul {
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    li {
+      padding: 10px 0;
+      list-style: none;
+      &:nth-child(2) {
+        font-weight: 700;
+        font-size: 18px;
+        color: var(--secondary-color);
+      }
+      a {
+        text-align: center;
+        padding: 10px 20px;
+      }
+    }
+  }
+}
