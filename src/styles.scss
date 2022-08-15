@@ -19,3 +19,67 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--primary-font), sans-serif;
+}
+p, button {
+  font-family: var(--primary-font), sans-serif;
+}
+
+
+h1 {
+  font-size: 4.5rem;
+  font-weight: 800;
+}
+
+h2 {
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+h4 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+h5 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+h6 {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+p {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: text-decoration 0.3s ease-in-out;
+}
+a:hover {
+  text-decoration: underline;
+  color: inherit;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  border: none;
+  outline: none;
+  background: none;
+  color: inherit;
+}
