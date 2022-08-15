@@ -5,7 +5,7 @@
       <button (click)="changeWebCame(true)"><img height="30" src="../../assets/icons/camera-switch-primary.svg" alt=""></button>
     </div>
     <div class="camera-screen">
-      <webcam [height]="500" [width]="350" [trigger]="triggerObservable" (imageCapture)="handleImage($event)"
+      <webcam [height]="350" [width]="350" [trigger]="triggerObservable" (imageCapture)="handleImage($event)"
         *ngIf="showWebcam" [switchCamera]="nextWebcamObservable"></webcam>
     </div>
     <div class="capture">
