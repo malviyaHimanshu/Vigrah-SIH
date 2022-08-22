@@ -1,30 +1,76 @@
-.navbar {
-  font-family: var(--primary-font);
-  font-weight: 500;
-  font-size: 14px;
-  color: var(--primary-color);
-  height: 70px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  ul {
-    width: 100%;
-    max-width: 600px;
-    padding: 10px 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+// .navbar {
+//   font-family: var(--primary-font);
+//   font-weight: 500;
+//   font-size: 14px;
+//   color: var(--primary-color);
+//   height: 70px;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   ul {
+//     width: 100%;
+//     max-width: 600px;
+//     padding: 10px 0;
+//     display: flex;
+//     align-items: center;
+//     justify-content: space-around;
+//     li {
+//       padding: 10px 0;
+//       list-style: none;
+//       a {
+//         text-align: center;
+//         padding: 10px 20px;
+//       }
+//     }
+//   }
+// }
+.active {
+  a {
+    color: var(--secondary-color);
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    position: relative;
+  }
+  .active {
+    a {
+      color: inherit;
+    }
+    background-color: var(--secondary-color);
+    border-radius: 8px;
+  }
+  .navigation-links {
+    text-align: start;
+    margin: 20px;
+    position: absolute;
+    top: 50px;
+    right: 0px;
+    border-radius: 8px;
+    color: var(--primary-background-color);
+    background-color: rgba(255, 255, 255, 0.826);
+    backdrop-filter: blur(2rem);
+    width: fit-content;
+    height: auto;
+    padding: 10px;
     li {
+      // border: solid 1px purple;
+      // border: solid 1px var(--primary-background-color);
+      // border-width: 0 0 1px 0;
       padding: 10px 0;
-      list-style: none;
-      &:nth-child(2) {
-        font-weight: 700;
-        font-size: 18px;
-        color: var(--secondary-color);
-      }
       a {
-        text-align: center;
-        padding: 10px 20px;
+        // border: solid 1px white;
+        font-weight: 500;
+        padding: 10px;
+        padding-right: 50px;
+        &:hover {
+          color: inherit;
+          text-decoration: none;
+        }
+      }
+      &:last-child{
+        border: none;
       }
     }
   }

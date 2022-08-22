@@ -1,9 +1,33 @@
 <nav>
-  <div class="navbar">
-    <ul>
-      <li><a routerLink="/">HOME</a></li>
-      <li><a routerLink="/">VIGRAH</a></li>
-      <li><a routerLink="/about">ABOUT</a></li>
+  <div class="navbar text-center flex md:flex-col justify-between items-center mx-auto px-5" style="font-family: var(--primary-font);">
+    <div class="my-5">
+      <a routerLink="/" class="font-bold text-2xl hover:no-underline text-primary hover:text-primary">VIGRAH</a>
+    </div>
+    <ul [class.hidden]="!show" class="navigation-links mb-5 w-full md:flex items-center justify-evenly max-w-4xl mx-auto z-10">
+      <li [class.active]="router.url == '/'"><a routerLink="/" (click)="showNav()" class="hover:text-primary">Home</a></li>
+      <li [class.active]="router.url == '/scan'"><a routerLink="/scan" (click)="showNav()" class="hover:text-primary">Abhiñāna</a></li>
+      <li [class.active]="router.url == '/transliterate'"><a routerLink="/transliterate" (click)="showNav()" class="hover:text-primary">Akṣarāntara</a></li>
+      <li [class.active]="router.url == '/inscriptions'"><a routerLink="/inscriptions" (click)="showNav()" class="hover:text-primary">Kośa</a></li>
+      <li [class.active]="router.url == '/about'"><a routerLink="/about" (click)="showNav()" class="hover:text-primary">About</a></li>
     </ul>
+    <div class="hamburger">
+      <button data-collapse-toggle="navbar-default" type="button" (click)="showNav()"
+        class="inline-flex items-center p-2 ml-3 text-sm rounded-lg md:hidden focus:outline-none focus:ring-2 focus:ring-primary dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+        aria-controls="navbar-default" aria-expanded="false">
+        <span class="sr-only">Open main menu</span>
+        <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd"
+            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+            clip-rule="evenodd"></path>
+        </svg>
+      </button>
+    </div>
   </div>
 </nav>
+
+
+<!-- <nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900">
+  <div class="container flex flex-wrap justify-between items-center mx-auto">
+  </div>
+</nav> -->

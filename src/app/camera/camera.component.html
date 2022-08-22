@@ -8,8 +8,15 @@
       <webcam [height]="350" [width]="350" [trigger]="triggerObservable" (imageCapture)="handleImage($event)"
         *ngIf="showWebcam" [switchCamera]="nextWebcamObservable"></webcam>
     </div>
-    <div class="capture">
+    <div class="captured-image" *ngIf="webcamImage">
+      <img [src]="webcamImage.imageAsDataUrl" />
+    </div>
+    <div class="capture" *ngIf="!webcamImage">
       <button (click)="takeSnapshot()"><span><img src="../../assets/icons/ic-devices-camera-gray.svg" alt=""></span>Capture</button>
+    </div>
+    <div class="post" *ngIf="webcamImage">
+      <button (click)="postPhoto()">Done</button>
+      <button (click)="postPhoto()">Retake</button>
     </div>
   </div>
 

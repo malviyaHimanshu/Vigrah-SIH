@@ -1,0 +1,25 @@
+<section class="p-5 md:h-auto h-[calc(100vh-100px)]">
+  <form #transliterationForm="ngForm" (ngSubmit)="onSubmit(transliterationForm.value)" class="max-w-3xl mx-auto w-full h-full flex flex-col items-center md:justify-center justify-between">
+    <div class="w-full">
+      <div class="flex items-center justify-between gap-4">
+        <div class="md:py-3 py-2 md:px-10 px-4 bg-gray-400/50 rounded-lg md:w-auto w-full">
+          <p class="text-sm">Brahmi</p>
+        </div>
+        <div class="md:py-3 py-2 md:px-10 px-4 bg-gray-400/50 rounded-lg md:w-auto w-full">
+          <p class="text-sm">English (IAST)</p>
+        </div>
+      </div>
+      <div class="mt-5 flex flex-col md:flex-row md:gap-5 gap-3">
+        <div class="input md:w-1/2">
+          <textarea name="inputText" ngModel id="inputText" placeholder="Input text here..."  cols="30" rows="10" class="bg-gray-400/50 rounded-lg text-sm p-5 w-full md:h-[calc(42vh)] h-[calc(20vh)] focus:outline-none"></textarea>
+        </div>
+        <div class="output bg-gray-400/50 rounded-lg text-sm p-5 md:w-1/2 w-full md:h-[calc(42vh)] h-[calc(22vh)]">
+          {{outputText}}
+        </div>
+      </div>
+    </div>
+    <div class="md:w-auto w-full md:mt-10">
+      <button type="submit" value="submit" class="bg-primary py-3 px-6 w-full rounded-lg text-secondary font-medium">Transliterate</button>
+    </div>
+  </form>
+</section>

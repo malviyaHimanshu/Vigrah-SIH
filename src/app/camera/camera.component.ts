@@ -10,10 +10,10 @@ import { Router } from '@angular/router';
 })
 export class CameraComponent implements OnInit {
 
-  @Output() getPicture = new EventEmitter<WebcamImage>();
+  // @Output() getPicture = new EventEmitter<WebcamImage>();
   showWebcam = true;
   isCameraExist = true;
-
+  webcamImage: WebcamImage | undefined;
   errors: WebcamInitError[] = [];
 
   // webcam snapshot trigger
@@ -48,8 +48,13 @@ export class CameraComponent implements OnInit {
   }
 
   handleImage(webcamImage: WebcamImage) {
-    this.getPicture.emit(webcamImage);
+    // this.getPicture.emit(webcamImage);
+    this.webcamImage = webcamImage;
     this.showWebcam = false;
+  }
+
+  postPhoto() {
+    
   }
 
   get triggerObservable(): Observable<void> {
