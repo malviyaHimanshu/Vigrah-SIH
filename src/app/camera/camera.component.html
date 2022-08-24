@@ -14,9 +14,9 @@
     <div class="capture" *ngIf="!webcamImage">
       <button (click)="takeSnapshot()"><span><img src="../../assets/icons/ic-devices-camera-gray.svg" alt=""></span>Capture</button>
     </div>
-    <div class="post" *ngIf="webcamImage">
-      <button (click)="postPhoto()">Done</button>
-      <button (click)="postPhoto()">Retake</button>
+    <div class="w-full sm:max-w-xs mt-5 flex flex-col gap-3 font-medium" *ngIf="webcamImage">
+      <button (click)="postPhoto()" class="w-full bg-primary text-secondary py-2 px-5 rounded-lg">Transliterate</button>
+      <button (click)="retake()" class="w-full text-primary underline text-lg rounded-lg">Retake</button>
     </div>
   </div>
 

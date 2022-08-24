@@ -2,6 +2,7 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { WebcamImage, WebcamInitError, WebcamUtil } from 'ngx-webcam';
 import { Observable, Subject } from 'rxjs';
 import { Router } from '@angular/router';
+import { CameraService } from './camera.service';
 
 @Component({
   selector: 'app-camera',
@@ -20,7 +21,7 @@ export class CameraComponent implements OnInit {
   private trigger: Subject<void> = new Subject<void>();
   private nextWebcam: Subject<boolean | string> = new Subject<boolean | string>();
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private Service: CameraService) { }
 
 
   ngOnInit(): void {
@@ -36,7 +37,7 @@ export class CameraComponent implements OnInit {
 
   onOffWebCame() {
     this.showWebcam = !this.showWebcam;
-    this.router.navigateByUrl("/");
+    this.router.navigateByUrl("/abhinana");
   }
 
   handleInitError(error: WebcamInitError) {
@@ -53,8 +54,21 @@ export class CameraComponent implements OnInit {
     this.showWebcam = false;
   }
 
+  retake() {
+    this.webcamImage = undefined;
+    this.showWebcam = true;
+  }
+
   postPhoto() {
-    
+    console.log("this is image : ", this.webcamImage);
+    let incomingData = {
+      image: this.webcamImage,
+    }
+    this.Service.saveImageToModel(incomingData).subscribe(
+      (data) => {
+        console.log("Data send successfully", data);
+      }
+    )
   }
 
   get triggerObservable(): Observable<void> {

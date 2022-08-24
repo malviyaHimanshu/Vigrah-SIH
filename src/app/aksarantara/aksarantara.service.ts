@@ -9,6 +9,6 @@ export class AksarantaraService {
   constructor(private http: HttpClient) { }
 
   public getTransliteration(input: any) {
-    return this.http.get(`http://aksharamukha-plugin.appspot.com/api/public?target=IAST&text=${input}`, {responseType: 'text'});
+    return this.http.get(`https://aksharamukha-plugin.appspot.com/api/public?target=IAST&text=${input}`, {responseType: 'text'});
   }
 }

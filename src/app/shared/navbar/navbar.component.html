@@ -4,11 +4,30 @@
       <a routerLink="/" class="font-bold text-2xl hover:no-underline text-primary hover:text-primary">VIGRAH</a>
     </div>
     <ul [class.hidden]="!show" class="navigation-links mb-5 w-full md:flex items-center justify-evenly max-w-4xl mx-auto z-10">
-      <li [class.active]="router.url == '/'"><a routerLink="/" (click)="showNav()" class="hover:text-primary">Home</a></li>
-      <li [class.active]="router.url == '/scan'"><a routerLink="/scan" (click)="showNav()" class="hover:text-primary">Abhiñāna</a></li>
-      <li [class.active]="router.url == '/transliterate'"><a routerLink="/transliterate" (click)="showNav()" class="hover:text-primary">Akṣarāntara</a></li>
-      <li [class.active]="router.url == '/inscriptions'"><a routerLink="/inscriptions" (click)="showNav()" class="hover:text-primary">Kośa</a></li>
-      <li [class.active]="router.url == '/about'"><a routerLink="/about" (click)="showNav()" class="hover:text-primary">About</a></li>
+      <li [class.active]="router.url == '/'">
+        <a routerLink="/" (click)="showNav()" class="hover:text-primary">
+          <span>Home</span>
+        </a>
+      </li>
+      <li [class.active]="router.url == '/abhinana'">
+        <a routerLink="/abhinana" (click)="showNav()" class="hover:text-primary">
+          <span class="old">Abhiñāna</span>
+          <span class="new">OCR</span>
+        </a>
+      </li>
+      <li [class.active]="router.url == '/transliterate'">
+        <a routerLink="/transliterate" (click)="showNav()" class="hover:text-primary">
+          <span class="old">Akṣarāntara</span>
+          <span class="new">Transliteration</span>
+        </a>
+      </li>
+      <li [class.active]="router.url == '/inscriptions'">
+        <a routerLink="/inscriptions" (click)="showNav()" class="hover:text-primary">
+          <span class="old">Kośa</span>
+          <span class="new">Repository</span>
+        </a>
+      </li>
+      <li [class.active]="router.url == '/about'"><a routerLink="/about" (click)="showNav()" class="hover:text-primary"><span>About</span></a></li>
     </ul>
     <div class="hamburger">
       <button data-collapse-toggle="navbar-default" type="button" (click)="showNav()"

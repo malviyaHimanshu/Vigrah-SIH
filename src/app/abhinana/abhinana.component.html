@@ -1,0 +1,14 @@
+<section>
+  <div class="content">
+    <h4>Welcome back!</h4>
+    <h6>Looking for some inscription? scan here👇🏻</h6>
+  </div>
+  <div class="buttons">
+    <button routerLink="/scan">Scan Photo</button>
+    <form class="w-full md:max-w-xs flex flex-col items-center">
+      <input type="file" (change)="onFileChanged($event)" style="display: none;" #fileInput>
+      <button (click)="fileInput.click()" *ngIf="!selectedFile">Upload Photo</button>
+      <!-- <button (click)="onUpload()" *ngIf="selectedFile">Upload</button> -->
+    </form>
+  </div>
+</section>

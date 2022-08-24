@@ -11,6 +11,8 @@ import { AboutComponent } from './about/about.component';
 import { CameraComponent } from './camera/camera.component';
 import { AksarantaraComponent } from './aksarantara/aksarantara.component';
 import { KosaComponent } from './kosa/kosa.component';
+import { InscriptionDetailComponent } from './inscription-detail/inscription-detail.component';
+import { AbhinanaComponent } from './abhinana/abhinana.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { KosaComponent } from './kosa/kosa.component';
     AboutComponent,
     CameraComponent,
     AksarantaraComponent,
-    KosaComponent
+    KosaComponent,
+    InscriptionDetailComponent,
+    AbhinanaComponent
   ],
   imports: [
     BrowserModule,
