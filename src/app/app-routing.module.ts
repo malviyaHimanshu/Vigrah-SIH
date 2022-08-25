@@ -7,6 +7,7 @@ import { AksarantaraComponent } from './aksarantara/aksarantara.component';
 import { KosaComponent } from './kosa/kosa.component';
 import { InscriptionDetailComponent } from './inscription-detail/inscription-detail.component';
 import { AbhinanaComponent } from './abhinana/abhinana.component';
+import { OcrOutputComponent } from './ocr-output/ocr-output.component';
 
 const routes: Routes = [
   {path: "", component: HomeComponent},
@@ -16,6 +17,7 @@ const routes: Routes = [
   {path: "abhinana", component: AbhinanaComponent},
   {path: "inscriptions", component: KosaComponent},
   {path: "inscriptionDetails", component: InscriptionDetailComponent},
+  {path: "output", component: OcrOutputComponent},
 
 ];
 

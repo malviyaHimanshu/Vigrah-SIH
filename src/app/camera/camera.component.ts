@@ -3,6 +3,7 @@ import { WebcamImage, WebcamInitError, WebcamUtil } from 'ngx-webcam';
 import { Observable, Subject } from 'rxjs';
 import { Router } from '@angular/router';
 import { CameraService } from './camera.service';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-camera',
@@ -15,6 +16,7 @@ export class CameraComponent implements OnInit {
   showWebcam = true;
   isCameraExist = true;
   webcamImage: WebcamImage | undefined;
+  images: any = []
   errors: WebcamInitError[] = [];
 
   // webcam snapshot trigger
@@ -51,22 +53,41 @@ export class CameraComponent implements OnInit {
   handleImage(webcamImage: WebcamImage) {
     // this.getPicture.emit(webcamImage);
     this.webcamImage = webcamImage;
+    this.images[0] = this.webcamImage;
     this.showWebcam = false;
   }
 
   retake() {
     this.webcamImage = undefined;
+    this.images = [];
     this.showWebcam = true;
   }
 
   postPhoto() {
-    console.log("this is image : ", this.webcamImage);
-    let incomingData = {
-      image: this.webcamImage,
+    console.log("this is the image : ", this.images[0]);
+    let tempImage = this.images[0];
+    const arr = tempImage.imageAsDataUrl.split(",");
+    const mime = arr[0].match(/:(.*?);/)[1];
+    const bstr = atob(arr[1]);
+    let n = bstr.length;
+    const u8arr = new Uint8Array(n);
+    while (n--) {
+      u8arr[n] = bstr.charCodeAt(n);
     }
-    this.Service.saveImageToModel(incomingData).subscribe(
+    const file: File = new File([u8arr], 'scannedimage.jpeg', { type: tempImage._mimeType });
+    this.images[0] = file;
+    console.log("this is the image : ", this.images[0]);
+
+    const formData = new FormData();
+    if(this.images.length) {
+      for(let i=0; i<this.images.length; i++) {
+        formData.append('image[]', this.images[i]);
+      }
+    }
+    this.Service.saveImageToModel(formData).subscribe(
       (data) => {
-        console.log("Data send successfully", data);
+        console.log("Data sent successfully", data);
+        this.router.navigateByUrl(`/output?id=${data}`);
       }
     )
   }

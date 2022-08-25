@@ -12,4 +12,8 @@ export class CameraService {
   public saveImageToModel(data: any) {
     return this.http.post<any>(`${environment.BASE_SERVICE_URL}/ocr_api/send_image`, data);
   }
+
+  public getImageByID(id: any) {
+    return this.http.get<any>(`${environment.BASE_SERVICE_URL}/ocr_api/get_image?id=${id}`);
+  }
 }
