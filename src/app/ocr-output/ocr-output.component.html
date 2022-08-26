@@ -3,12 +3,15 @@
     <img src="{{baseUrl}}/media/{{data.image}}" class="rounded-lg" alt="">
   </div>
   <div class="py-2 px-4 bg-gray-400/50 rounded-lg md:w-auto w-full mt-5">
-    <h6 class="underline text-lg mb-2">Brahmi</h6>
-    <p class="md:text-base text-sm">{{data.img_pred}}</p>
-    <p class="md:text-base text-sm" *ngIf="!data.img_pred">SOME ERROR OCCURED!</p>
+    <h6 class="underline text-3xl mb-2">Devanagari</h6>
+    <p class="md:text-2xl text-xl whitespace-pre-line">{{data.img_pred}}</p>
+    <p class="md:text-base text-sm" *ngIf="!data.img_pred">UNABLE TO GET TRANSLITERATION!</p>
   </div>
   <!-- <div class="py-2 px-4 bg-gray-400/50 rounded-lg md:w-auto w-full mt-5">
     <h6 class="underline text-lg mb-2">Devanagari</h6>
     <p class="md:text-base text-sm">लॊरॆम िपसुम दॊलॊर, सित aमॆत cॊनसॆcतॆतुर aदिपिसिcिनग ॆलित। ॆa िुसतॊ क़ुिबुसदम मगनि सॆक़ुि दॆलॆनिति cुपिदिततॆ फ़ुगिaत वॊलुपततिबुस दिcत। पलcॆaत, मॊदि।</p>
   </div> -->
+  <div [class.hidden]="!isLoading" class="w-screen h-screen absolute top-0 z-20 left-0 right-0 bottom-0 flex items-center justify-center backdrop-blur">
+    <h4 class="text-primary">LOADING...</h4>
+  </div>
 </section>

@@ -14,6 +14,6 @@ export class KosaService {
   }
 
   public getInscriptionDetails(id: any) {
-    return this.http.get<any>(`${environment.BASE_SERVICE_URL}/main_api/get_inscription_details?id=${id}`)
+    return this.http.get<any>(`${environment.BASE_SERVICE_URL}/main_api/get_inscription_details?uid=${id}`)
   }
 }

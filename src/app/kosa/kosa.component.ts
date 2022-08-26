@@ -32,7 +32,7 @@ export class KosaComponent implements OnInit {
   }
 
   goToInscriptionDetails(id: any) {
-    this.router.navigateByUrl(`inscriptionDetails?id=${id}`);
+    this.router.navigateByUrl(`inscriptionDetails?uid=${id}`);
   }
 
 }

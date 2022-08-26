@@ -16,7 +16,7 @@ export class InscriptionDetailComponent implements OnInit {
   constructor(private route: ActivatedRoute, private Service: KosaService) { }
 
   ngOnInit(): void {
-    let inscription_id = this.route.snapshot.queryParams['id'];
+    let inscription_id = this.route.snapshot.queryParams['uid'];
     this.getInscriptionDetails(inscription_id);
   }
 

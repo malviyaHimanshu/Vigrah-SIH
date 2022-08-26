@@ -1,30 +1,412 @@
-<section class="p-5 max-w-3xl mx-auto">
+<section class="p-5 max-w-7xl mx-auto">
   <div class="text-center">
     <h5>{{inscriptionDetail.name}}</h5>
-    <p>Time period</p>
+    <p>( {{inscriptionDetail.time_period}} )</p>
   </div>
-  <div>
-    <img src="{{baseURL}}/media/{{inscriptionDetail.inscription_image}}" alt="" class="mx-auto my-5 rounded-lg">
-  </div>
-  <div class="my-5">
-    <table class="table-auto w-full">
-      <tbody>
-        <tr class="border-y">
-          <td>Ruler/Person</td>
-          <td>Some person</td>
-        </tr>
-        <tr class="border-b">
-          <td>Language</td>
-          <td>some Language</td>
-        </tr>
-        <tr class="border-b">
-          <td>Script</td>
-          <td>some script</td>
-        </tr>
-      </tbody>
-    </table>
+  <div class="flex flex-col-reverse md:flex-row items-start mt-8 md:gap-10">
+    <div class="md:w-1/2">
+      <p class="underline font-medium text-lg mt-5">Transliteration</p>
+      <p class="text-sm" *ngIf="inscriptionDetail.uid == 'RI0002'">
+        1. lājinā Piyadasinā duvāḍasa-[vasābhisitenā]
+        [iyaṃ Nigoha]-kubhā di[nā ājīvikehi]<br>
+        
+        2. lājinā Piyadasinā duvā
+        ḍasa-vasābhisitenā iyaṃ
+        kubhā Khalatika-pavatasi
+        dinā [ājīvi]kehi<br>
+        
+        3. lājā Piyadasī ekunavī
+        sati-vasā[bh]isi[t]e ja[lagh]o
+        [sagama]thāta [me] i[yaṃ kubhā]
+        su[p]i[y]e Kha .......... [di]
+        nā
+      </p>
+      <p class="text-sm" *ngIf="inscriptionDetail.uid == 'RI0003'">
+        Pr[i]yadas[i] l[ā]jā Māgadhe saṃghaṃ abhivāde[tū]naṃ āhā ap[ā]bādhataṃ ca phāsu-vihālataṃ cā
+        vidite v[e] bhaṃte āvatake h[a]mā Budhasi dhaṃmasi saṃghasī ti gālave caṃ prasāde ca e keci bhaṃte
+        bhagavatā Budhe[na] bhāsite sarve se subhāsite vā e cu kho bhamte hamiyāye diseyā hevaṃ sadhamme
+        cil[a-ṭhi]tāke hosatī ti alahāmi hakaṃ ta[ṃ] v[ā]tave imāni bhaṃt[e dha]mma-paliyāyani Vinaya-samukase
+        Aliya-vasāṇi Anāgata-bhayāni Muni-gāthā Moneya-sūte Upaṭisa-pasine e cā Laghulo-
+        vāde musā-vādaṃ adhigicya bhagavatā Budhena bhāsite etāni bhaṃte dhaṃma-paliyāyāni ichāmi
+        kiṃti bahuke bhikhu-[p]āye cā bhikhuniye c[ā] abhikhinaṃ sun[e]yu cā upadhāl[a]yeyū cā
+        hevaṃmeva upāsakā cā upāsikā cā eteni bhaṃte imaṃ likhā[pa]yāmi abhipretaṃ me jānaṃtū ti.
+      </p>
+      <p class="text-sm" *ngIf="inscriptionDetail.uid == 'PI0001'">
+        Devāna[pi]yena Piyadasina lājina vīsati-vasābhisitena
+        atana āgāca mahīyite hida Budhe jāte Sakyamunī ti
+        silā vigaḍabhī cā kālāpita silā-thabhe ca usapāpite
+        hida Bhagavaṃ jāte ti
+        Luṃmini-gāme ubalike kaṭe
+        aṭha-bhāgiye ca
+      </p>
+      <p class="text-sm" *ngIf="inscriptionDetail.uid == 'PI0002'">
+        Devānaṃpiyena Piyadasina lājina codasa-vasā[bh]i[si]t[e]n[a]
+        Budhasa Konākamanasa thube dutiyaṃ vaḍhite
+        ........ sābhisitena ca atana āgāca mahīyite
+        .......... pāpite
+      </p>
 
-    
+
+      <p class="underline font-medium text-lg mt-5">Translation</p>
+      <p class="text-sm" *ngIf="inscriptionDetail.uid == 'RI0001'">
+        (A) This rescript on morality has been caused to be written by king Devānāṁpriya Priyadarśin. (B) Here no living being
+        must be killed and sacrificed. (C) And no festival meeting must be held. (D) For king Devānāṁpriya Priyadarśin sees much
+        evil in festival meetings. (E) But there are also some festival meetings which are considered meritorious by king
+        Devānāṁpriya Priyadarśin. (F) Formerly in the kitchen of king Devānāṁpriya Priyadarśin many hundred thousands of animals
+        were killed daily for the sake of curry. (G) But now, when this rescript on morality is written, only three animals are
+        being killed (daily) for the sake of curry, (viz.) two peacocks (and) one deer, (but) even this deer not regularly. (H)
+        Even these three animals shall not be killed in future.
+        Everywhere in the dominions of king Devānāṁpriya Priyadarśin, and likewise among (his) borderers, such as the Choḍas,
+        the Pāṇḍyas, the Satiyaputa, the Ketalaputa, even Tāmraparṇī, the Yona king Antiyaka, and also the kings who are the
+        neighbours of this Antiyaka, – everywhere two (kinds of) medical treatment were established by king Devānāṁpriya
+        Priyadarśin, (viz.) medical treatment for men and medical treatment for cattle. (B) And wherever there were no herbs
+        that are beneficial to men and beneficial to cattle, everywhere they were caused to be imported and to be planted. (C)
+        Wherever there were no roots and fruits, everywhere they were caused to be imported and to be planted. (D) On the roads
+        wells were caused to be dug, and trees were caused to be planted for the use of cattle and men.
+        (A) King Devānāṃpriya Priyadarśin speaks thus. (B) (When I had been) anointed twelve years, the following was ordered by
+        me. (C) Everywhere in my dominions the Yuktas, the Rājūka, and the Prādeśika shall set out on a complete tour
+        (throughout their charges) every five years for this very purpose, (viz.) for the following instruction in morality as
+        well as for other business. (D) ‘Meritorious is obedience to mother and father. Liberality to friends, acquaintances,
+        and relatives, to Brāhmaṇas and Śramaṇas is meritorious. Abstention from killing animals is meritorious. Moderation in
+        expenditure (and) moderation in possessions are meritorious.’ (E) The council (of Mahāmātras) also shall order the
+        Yuktas to register (these rules) both with (the addition of) reasons and according to the letter.
+        (A) In times past, for many hundreds of years, there had ever been promoted the killing of animals and the hurting of
+        living beings, discourtesy to relatives, (and) discourtesy to Brāhmaṇas and Śramaṇas. (B) But now, in consequence of the
+        practice of morality on the part of king Devānāṁpriya Priyadarśin, the sound of drums has become the sound of morality,
+        showing the people representations of aerial chariots, representations of elephants, masses of fire, and other divine
+        figures. (C) Such as they had not existed before for many hundreds of years, thus there are now promoted, through the
+        instruction in morality on the part of king Devānāṁpriya Priyadarsin, abstention from killing animals, abstention from
+        hurting living beings, courtesy to relatives, courtesy to Brāhmaṇas and Śramaṇas, obedience to mother (and) father,
+        (and) obedience to the aged. (D) In this and many other ways is the practice of morality promoted. (E) And king
+        Devānāṁpriya Priyadarśin will ever promote this practice of morality. (F) And the sons, grandsons, and great-grandsons
+        of king Devānāṁpriya Priyadarśin will promote this practice of morality until the æon of destruction (of the world)
+        (and) will instruct (people) in morality, abiding by morality (and) by good conduct. (G) For this is the best work, viz.
+        instruction in morality. (H) And the practice of morality is not (possible) for (a person) devoid of good conduct. (I)
+        Therefore promotion and not neglect of this object is meritorious. (J) For the following purpose has this been caused to
+        be written, (viz. in order that) they should devote themselves to the promotion of this practice, and that the neglect
+        (of it) should not be approved (by them). (K) This was caused to be written by king Devānāṁpriya Priyadarśin (when he
+        had been) anointed twelve years.
+        (A) King Devānāṁpriya Priyadarśin speaks thus. (B) It is difficult to perform virtuous deeds. (C) He who starts
+        performing virtuous deeds accomplishes something difficult. (D) Now, by me many virtuous deeds have been performed. (E)
+        Therefore (among) my sons and grandsons, and (among) my descendants (who shall come) after them until the æon of
+        destruction (of the world), those who will conform to this (duty) will perform good deeds. (F) But he who will neglect
+        even a portion of this (duty) will perform evil deeds. (G) For sin is easily committed. (H) In times past (officers)
+        called Mahāmātras of morality (Dharma-mahāmātra) did not exist before. (I) But Mahāmātras of morality were appointed by
+        me (when I had been) anointed thirteen years. (J) These are occupied with all sects in establishing morality ……… of
+        those who are devoted to morality (even) among the Yoṇas, Kambojas, and Gandhāras, the Risṭikas and Peteṇikas, and
+        whatever other western borderers (of mine there are). (K) They are occupied with servants and masters ……… for the ………
+        happiness of those who are devoted to morality, (and) in freeing (them) from desire (for worldly life). (L) They are
+        occupied in supporting prisoners 6 (with money) ……… (if one has) children, or with those who are bewitched (i.e.
+        incurably ill ?) or with the aged. (M) They are occupied everywhere, both in Pāṭaliputra and in the outlying ……… and
+        whatever other relatives of mine (there are). (N) These Mahāmātras of morality ……… whether one is eager for morality ………
+        (O) For the following purpose has this rescript on morality been written ………
+        (A) King Devānāṁpriya Priyadarśin speaks thus. (B) In times past neither the disposal of affairs nor the submission of
+        reports at any time did exist before. (C) But I have made the following (arrangement). (D) Reporters are posted
+        everywhere, (with instructions) to report to me the affairs of the people at any time, while I am eating, in the harem,
+        in the inner apartment, even at the cowpen, in the palanquin, and in the parks. (E) And everywhere I am disposing of the
+        affairs of the people. (F) And if in the council (of Mahāmātras) a dispute arises, or an amendment is moved, in
+        connexion with any donation or proclamation which I myself am ordering verbally, or (in connexion with) an emergent
+        matter which has been delegated to the Mahāmātras, it must be reported to me immediately, anywhere, (and) at any time.
+        (G) Thus I have ordered. (H) For I am never content in exerting myself and in dispatching business. (I) For I consider
+        it my duty (to promote) the welfare of all men. (J) But the root of that (is) this, (viz.) exertion and the dispatch of
+        business. (K) For no duty is more important than (promoting) the welfare of all men. (L) And whatever effort I am
+        making, (is made) in order that I may discharge the debt (which I owe) to living beings, (that) I may make them happy in
+        this (world), and (that) they may attain heaven in the other (world). (M) For the following purpose has this rescript on
+        morality been caused to be written, (viz.) that it may last long, and that my sons, grandsons, and great-grandsons may
+        conform to this for the welfare of all men. (N) But it is difficult to accomplish this without great zeal.
+        (A) King Devānāṁpriya Priyadarśin desires (that) all sects may reside everywhere. (B) (For) all these desire both
+        self-control and purity of mind. (C) But men possess various desires (and) various passions. (D) Either they will fulfil
+        the whole, or they will fulfil (only) a portion (of their duties). (E) But even one who (practises) great liberality,
+        (but) does not possess self-control, purity of mind, gratitude, and firm devotion, is very mean.
+        (A) In times past kings used to set out on pleasure-tours. (B) On these (tours) hunting and other such pleasures were
+        (enjoyed). (C) But when king Devānāṁpriya Priyadarśin had been anointed ten years, he went to Saṁbodhi. (D) Therefore
+        these tours of morality (were undertaken). (E) On these (tours) the following 3 takes place, (viz.) visiting Brāhmaṇas
+        and Śramaṇas and making gifts (to them), visiting the aged and supporting (them) with gold, visiting the people of the
+        country, instructing (them) in morality, and questioning (them) about morality, as suitable for this (occasion). (F)
+        This second period (of the reign) of king Devānāṁpriya Priyadarśin becomes a pleasure in a higher degree.
+        (A) King Devānāṁpriya Priyadarśin speaks thus. (B) Men are practising various ceremonies during illness, or at the
+        marriage of a son or a daughter, or at the birth of a son, or when setting out on a journey; on these and other
+        (occasions) men are practising various ceremonies. (C) But in such (cases) women are practising many and various vulgar
+        and useless ceremonies. (D) Now, ceremonies should certainly be practised. (E) But ceremonies like these bear little
+        fruit indeed. (F) But the following practice bears much fruit, viz. the practice of morality. (G) Herein the following
+        (are comprised), (viz.) proper courtesy to slaves and servants, reverence to elders, gentleness to animals, (and)
+        liberality to Brāhmaṇas and Śramaṇas; these and other such (virtues) are called the practice of morality. (H) Therefore
+        a father, or a son, or a brother, or a master ought to say:- ‘This is meritorious. This practice should be observed
+        until the (desired) object is attained.’ (I) And it has been said also: ‘Gifts are meritorious.’ (J) But there is no
+        such gift or benefit as the gift of morality or the benefit of morality. (K) Therefore a friend, or a well-wisher, or a
+        relative, or a companion should indeed admonish (another) on such and such an occasion: – ‘This ought to be done; this
+        is meritorious. By this (practice) it is possible to attain heaven.’ (L) And what is more desirable than this, viz. the
+        attainment of heaven?
+        (A) King Devānāṁpriya Priyadarśin does not think that either glory or fame conveys much advantage, except (on account of
+        his aim that) in the present time, and in the distant (future), men may (be induced) by him to practise obedience to
+        morality, and that they may conform to the duties of morality. (B) On this (account) king Devānāṁpriya Priyadarśin is
+        desiring glory and fame. (C) But whatever effort king Devānāṁpriya Priyadarśin is making, all that (is) for the sake of
+        (merit) in the other (world), (and) in order that all (men) may run little danger. (D) But the danger is this, viz.
+        demerit. (E) But it is indeed difficult either for a lowly person or for a high one to accomplish this without great
+        zeal (and without) laying aside every (other aim).10 (F) But among these (two) it is indeed (more) difficult to
+        accomplish for a high (person).
+        (A) King Devānāṁpriya Priyadarśin speaks thus. (B) There is no such gift as the gift of morality, or acquaintance
+        through morality, or the distribution of morality, or kinship through morality. (C) Herein the following are
+        (comprised), (viz.) proper courtesy to slaves and servants, obedience to mother (and) father, liberality to friends,
+        acquaintances, and relatives, to Brāhmaṇas and Śramaṇas,(and) abstention from killing animals.12 (D) Concerning this a
+        father, or a son, or a brother, or a friend, an acquaintance, or a relative, (or) even (mere) neighbours, ought to say :
+        ‘This is meritorious. This, ought to be done.’ (E) If one is acting thus, the attainment of (happiness) in this world is
+        (secured), and endless merit is produced in the other (world) by that gift of morality.
+        (A) King Devānaṁpriya Priyadarśin is honouring all sects: both ascetics and householders; both with gifts and with
+        honours of various kinds he is honouring them. (B) But Devānaṁpriya does not value either gifts or honours so (highly)
+        as (this), (viz.) that a promotion of the essentials of all sects should take place. (C) But a promotion of the
+        essentials (is possible) in many ways. (D) But its root is this, viz. guarding (one’s) speech (i. e) that neither
+        praising one’s own sect nor blaming other sect should take place on improper occasions, or (that) it should be moderate
+        in every case. (E) But other sects ought to be duly honoured in every case. (F) If one is acting thus, he is both
+        promoting his own sect and benefiting other sects. (G) If one is acting otherwise than thus, he is both hurting his own
+        sect and wronging other sects as well. (H) For whosoever praises his own sect or blames other sects;–all (this) out of
+        devotion to his own sect, (i.e.) with the view of glorifying his own sect,–if he is acting thus, he rather injures his
+        own sect very severely. (I) Therefore concord alone is meritorious, (i.e.) that they should both hear and obey each
+        other's morals. (J) For this is the desire of Devānaṁpriya, (viz.) that all sects should be full of learning, and should
+        be pure in doctrine. (K) And those who are attached to their respective (sects) ought to be spoken to 1 (as follows).
+        (L) Devānaṁpriya does not value either gifts or honours so (highly) as (this), (viz.) that a promotion of the essentials
+        of all sects should take place. (M) And many (officers) are occupied for this purpose, (viz.) the Mahāmātras of
+        morality, the Mahāmātras controlling women, the inspectors of cowpens, and other classes (of officials). (N) And this is
+        the fruit of it, (viz.) that both the promotion of one's own sect takes place, and the glorification of morality.
+        (A) .......... the Kaliṅgas .......... (B) . . . . . . . . . . one hundred thousand in number were those who were slain
+        there, (and) many times as many those who died. (C) After that, now that (the country of) the Kaliṅgas has been taken, a
+        zealous study of morality .......... (D) .......... [the repentance] of Devānaṁpriya .......... (E) ..........
+        slaughter, death, and deportation of people, this is considered very painful and deplorable by Devānaṁpriya. (F)
+        .......... (G) .......... Brāhmaṇas or Śramaṇas, [or] other .......... obedience to mother (and) to father, obedience to
+        elders .......... to friends, acquaintances, companions, and relatives, [to] slaves .......... or deportation of (their)
+        beloved ones. (H) .......... [companions] and relatives are then incurring misfortune, this (misfortune) as well becomes
+        an injury to those (persons). (I) This is shared (by] all .......... (J) .......... these classes .......... except
+        among the Yoṇas .......... where men are not indeed attached to some sect. (K) As many people as at that time ..........
+        part is considered deplorable by Devānāṁ[priya]. (L) .......... what can be forgiven. (M) And even the forests which are
+        (included) in the dominions of Devānāṁpriya .......... (N) They are [told] .......... of Devānāṁpriya .......... (O)
+        .......... towards all beings abstention from hurting, self-control, impartiality, and kindness. (Q) .......... has been
+        won by [Deva]nāṁpriya here and among all .......... the Yona king, and beyond him four kings, (viz.) Turamāya, Antekina,
+        Magā .......... (R) .......... here in the king's territory, [among] the Yonas and Kambo[jas] .......... among the
+        [A]ndhras and Pārindas,–everywhere (people) are conforming to Devānāṁpriya’s instruction in morality. (S) Even where the
+        envoys .......... and the instruction in morality, are conforming to morality .......... (T) .......... this conquest,–a
+        conquest (won) in every respect (and) repeatedly,–causes the feeling of satisfaction. (U) This satisfaction has been
+        obtained (by me) at the conquest by morality. (W) .......... [Devānā]ṁpriya. (X) For the following purpose this
+        [rescript] on morality .......... should not think that a [fresh] conquest ought to be made, (that), if a conquest does
+        please them, mercy .......... (Y) .......... in the other world. (AA) .......... both in this world and in the other
+        world.
+      </p>
+      <p class="text-sm" *ngIf="inscriptionDetail.uid == 'RI0002'">
+        By king Priyadarśin, (when he had been) anointed twelve years, this Banyan-cave was given to the Ājīvikas.
+        By king Priyadarśin, (when he had been) anointed twelve years, this cave in the Khalatika mountain was given to the
+        Ājīvikas.
+        When king Priyadarśin had been anointed nineteen years, this cave in the very pleasant Kha[latika mountain] was given by
+        me for (shelter during) the rainy season.
+      </p>
+      <p class="text-sm" *ngIf="inscriptionDetail.uid == 'RI0003'">
+        The Māgadha king Priyadarśin, having saluted the Samgha, hopes they are both well and comfortable. It is known to you,
+        Sirs, how great is my reverence and faith in the Buddha, the Dharma, (and) the Samgha. Whatsoever, Sirs, has been spoken
+        by the blessed Buddha, all that is quite well spoken. But, Sirs, what would indeed appear to me (to be referred to by
+        the words of the scripture): ‘thus the true Dharma will be of long duration’, that I feel bound to declare. The
+        following expositions of the Dharma, Sirs, (viz.) (1) the Vinaya-samukasa; (2) the Aliya-vasas, (3) the Anāgata-bhayas,
+        (4) the Muni-gāthās, (5) the Moneya-sūta, (6) the Upatisa-pasina, and (7) the Lāghulovāda which was spoken by the
+        blessed Buddha concerning falsehood,–I desire, Sirs, that many groups of monks and (many) nuns may repeatedly listen to
+        these expositions of the Dharma, and may reflect (on them). In the same way both laymen and laywomen (should act). (G)
+        For the following (purpose), Sirs, am I causing this to be written, (viz.) order that they may know my intention.
+      </p>
+      <p class="text-sm" *ngIf="inscriptionDetail.uid == 'TI0001'">
+        Victorious is the holy Jinendra ─ he who is exempt from old age, death and birth ─ in the sea of whose knowledge the
+        whole world is comprised like an island. And next, long victorious is the immeasurable, wide ocean of the Chalukya
+        family, which is the birth-place of jewels of men that are ornaments of the diadem of the earth.
+        And victorious for very long is Satyasraya, who in bestowing gifts and honors on the brave and on the learned, both
+        together on either, observes not the rule of correspondency of number. When many members of that race, bent on conquest,
+        applied to whom the title of Favourite of the Earth had at last become appropriate, had passed away,
+        There was, of the Chalukya lineage, the king named Jayasimha-vallabha, who in battle ─ where horses, foot soldiers and
+        elephants, bewildered, fell down under the strokes of many hundreds of weapons, and where thousands of frightful
+        headless trunks and of flashes of rays of swords were leaping to and fro─ by his bravery made Fortune his own, even
+        though she is suspected of fickleness.
+        His son was he who was named Raṇarâga, of divine dignity, the one master of the world, whose superhuman nature, (even)
+        when he was asleep, people knew from the pre-eminence of his form. His son was Polekêśin, who, though endowed with the
+        moon’s Beauty, and though the favourite of Fortune, became the bridegroom of Vatapipuri. Whose path in the pursuit of
+        the three objects of life the kings on earth even now are unable to follow; and bathed by whom with the water of the
+        purificatory rite, when he performed the horse-sacrifice, the earth beamed with brightness.
+        His son was Kîrtivarman, the night of doom to the Naḷas, Mauryas and Kadambas, whose mind, although his thoughts kept
+        aloof from others’ wives, was attracted by the Fortune of his adversary. Who, having secured the fortune of victory by
+        his valour in war, being a scent-elephant of a king, of great strength, at once completely broke down the multitude of
+        the broad kadamba trees ─ the Kadambas.
+        When his desire was bent on the dominion of the lord of the gods, his younger brother Maṅgalêśa became king, who by the
+        sheets of dust of his army of horse, encamped on the shores of the eastern and western seas, stretched an awning over
+        the quarters. Who in that house which was the battle-field, took in marriage the damsel, the Fortune of the
+        Kaṭachchuris, having scattered the gathering gloom, the array of elephants, with hundreds of bright-rayed lamps, the
+        swords.
+        And again, when he was desirous of taking the island of Rêvatî, his great army with many bright banners, which had
+        ascended the ramparts, as it was reflected in the water of the sea appeared like Varuṇa’s forces, quickly come there at
+        once at his word (of command). When his elder brother’s son, named Polekêśin, of a dignity like Nahusha’s, was coveted
+        by Fortune, and finding his uncle to be jealous of him thereat, had formed the resolution to wander abroad as an exile,
+        That Maṅgalêśa, whose great strength became on all sides reduced by the application of the powers of good counsel and
+        energy gathered by him, abandoned, together with the effort to secure the kingdom for his own son, both that no mean
+        kingdom of his and his life. Then, on the subversion of that rule encompassed by the darkness of enemies, the whole
+        world grew light again, invaded as it were by the lustrous rays of His irresistible splendor. Or when was it that the
+        sky ceased to be black like a swarm of bees with thundering clouds, in which flashes of lightning were dancing like
+        banners, and the edges of which were crushed in the rushing wind?
+        When, having found the opportunity, he who was named Âppâyika, and Gôvinda approached with their troops of elephants to
+        conquer the country north of the Bhaimarathî, the one in battle through His armies came to know the taste of fear, while
+        the other at once received the reward of the services rendered by him. When He was besieging Vanavâsî, which for a
+        girdle has the rows of haṁsa birds that sport on the high waves of the Varadâ as their play-place, and which by its
+        wealth rivaled the city of the gods, that fortress on land, having the surface of the earth all around covered with the
+        great sea of his army, to the looker-on seemed at once converted into a fortress in the water.
+        Although in former days they had acquired happiness by renouncing the seven sins, the Gaṅga and Âḷupa lords, being
+        subdued by his dignity, were always intoxicated by drinking the nectar of close attendance upon him. In the Koṅkaṇas the
+        impetuous waves of the forces directed by Him speedily swept away the rising wavelets of pools ─ the Mauryas.
+        When, radiant like the destroyer of Pura, he besieged Purî, the Fortune of the western sea, with hundreds of ships in
+        appearance like arrays of rutting elephants, the sky, dark-blue as a young lotus and covered with tiers of massive
+        clouds, resembled the sea, and the sea was like the sky. Subdued by His splendor, the Lâṭas, Mâḷavas and Gûrjaras became
+        as it were teachers of how feudatories, subdued by force, ought to behave.
+        Harsha, whose lotus-feet were arrayed with the rays of the jewels of the diadems of hosts of feudatories prosperous with
+        unmeasured might, through Him had his mirth (harsha) melted away by fear, having become loathsome with his rows of
+        lordly elephants fallen in battle. While He was ruling the earth with his broad armies, the neighbourhood of the
+        Vindhya, by no means destitute of the lustre of the many sandbanks of the Rêvâ, shone even more brightly by his great
+        personal splendor, having to be avoided by his elephants because, as it seemed, they by their bulk rivaled the
+        mountains.
+        Almost equal to Indra, He by means of all the three powers, gathered by him according to rule, and by his noble birth
+        and other excellent qualities, acquired the sovereignty over the three Mahârâshṭrakas with their nine and ninety
+        thousand villages. Through the excellencies of their householders prominent in the pursuit of the three objects of life,
+        and having broken the pride of other rulers of the earth, the Kaliṅgas with the Kôsalas by His army were made to evince
+        signs of fear.
+        Hard pressed (pishṭa) by him, Pishṭapura became a fortress not difficult of access ; wonderful (to relate), the ways of
+        the Kali age to him were inaccessible! Ravaged by him, the water of Kunâḷa ─ coloured with the blood of men killed with
+        many weapons, and the land within it overspread with arrays of accoutered elephants ─ was like the cloud-covered sky in
+        which the red evening-twilight has risen.
+        With his sixfold forces, the hereditary troops and the rest, who raised spotless chowries, hundreds of flags, umbrellas,
+        and darkness, and who churned the enemy elated with the sentiments of heroism and energy, He caused the splendour of the
+        lord of the Pallavas, who had opposed the rise of his power, to be obscured by the dust of his army, and to vanish
+        behind the walls of Kâñchîpura. When straightway he strove to conquer the Chôḷas, the Kâvêrî, who has the darting carps
+        for her tremulous eyes, had her current obstructed by the causeway formed by his elephants whose rutting-juice was
+        dripping down, and avoided the contact with the ocean.
+        There he caused great prosperity to the Chôḷas, Kêraḷas and Pâṇḍyas, he being the hot-rayed sun to the hoar-frost─ the
+        army of the Pallavas. While he, Satyâśraya, endowed with the powers of energy, mastery and good counsel, ─ having
+        conquered all the quarters, having dismissed the kings full of honours, having done homage to gods and Brâhmaṇs, having
+        entered the city of Vâtâpî─ is ruling, like one city, this earth which has the dark-blue waters of the surging sea for
+        its moat;
+        when thirty (and) three thousand and five years besides, joined with seven hundred years, have passed since the Bhârata
+        war; And when fifty (and) six and five hundred years of the Śaka kings also have gone by in Kali age;
+        This stone mansion of Jinêndra, a mansion of every kind of greatness, has been caused to be built by the wise Ravikîrti,
+        who has obtained the highest favour of that Satyâśraya whose rule is bounded by the three oceans. Of this eulogy and of
+        this dwelling of the Jina revered in the three worlds, the wise Ravikîrti himself is the author and also the founder.
+        May that Ravikîrti be victorious, who full of discernment has used the abode of the Jina, firmly built of stone, for a
+        new treatment of his theme, and who thus by his poetic skill has attained to the fame of Kâḷidâsa and of Bhâravi!
+      </p>
+      <p class="text-sm" *ngIf="inscriptionDetail.uid == 'PI0001'">
+        When king Devānāṃpriya Priyadarśin had been anointed twenty years, he came himself and worshipped (this spot), because
+        the Buddha Śākyamuni was born here. (He) both caused to be made a stone bearing a horse(?) and caused a stone pillar to
+        be set up, (in order to show) that the Blessed one was born here. (He) made the village of Luṃmini free of taxes, and
+        paying (only) an eighth share (of the produce).
+      </p>
+      <p class="text-sm" *ngIf="inscriptionDetail.uid == 'PI0002'">
+        When king Devānāṃpriya Priyadarśin had been anointed fourteen years, he enlarged the Stūpa of the Buddha Konākamana to
+        the double (of its original size). And when he had been anointed [twenty] years, he came himself and worshipped (this
+        spot) [and] caused [a stone pillar to be set up].
+      </p>
+      <p class="text-sm" *ngIf="inscriptionDetail.uid == 'PI0003'">
+        Whose mind is surcharged with happiness in consequence of his association with the wise, who is thus accustomed to
+        retain the truth and purpose of (any) science . . . . . . fixed . . . . . . upraised . . . . . . who, removing
+        impediments to the grace of good poetry through the very injunction (ājñā) of (poetic) excellence (guṇa) clustered
+        together (guṇita) by the experts, enjoys, in the literate world, in an attractive fashion, sovereignty, in consequence
+        of fame for copious lucid poetry.
+        (Exclaiming) "Come, oh worthy (one)", and embracing (him) with hair standing on end and indicating (his) feeling, (his)
+        father, perceiving (him) with the eye, overcome with affection, (and) laden with tears (of joy), (but) discerning the
+        true state (of things) said to him "so protect (thou) the whole earth", while he was being looked up with sad faces by
+        others of equal birth, (but) while the courtiers were breathing cheerfully.
+        Beholding whose many super-human actions, some felt the thrill of marvel and burst into horripilation, some relishing
+        with feeling . . . . . ., some afflicted with his prowess sought (whose) protection after performing obeisance;. . . . .
+        .
+        (Whose enemies), whose offence was always great, being conquered by his arm in battles . . . . . . day by day . . . . .
+        . pride . . . . . . (develop) repentance with their minds filled with delight and expanding with much and evident
+        pleasure and affection.
+        By whom, with the impetuosity of the prowess of (his) arm, which grew to overflowing, having singly and in a moment
+        uprooted Achyuta and Nāgāsēna and [Gaṇapati] come together in a battle (against him) thereafter, causing, indeed, the
+        scion of the Kōta family to be captured by (his) forces, (while) amusing himself at (the city) named Pushpa, while the
+        sun . . . . . . the banks . . . . . .
+        (Being) the enclosing structure of Dharma (Sacred Law), (his) multifarious sprouting fame is as bright as the rays of
+        the moon; (his) erudition pierces down to Truth . . . . . . quiescence . . . . . ., the course of (his) wise utterances
+        is worthy of study; (his) again is poetry which outdistances the greatness of the genius of (other) poets. What
+        excellence is there which does not belong to him ? So has he alone become a fit subject of contemplation with the
+        learned.?
+        Of him (who) was skilful in engaging in hundreds of battles of various kinds, whose only ally was valour (parākrama)
+        through the might of his own arm, and who (has thus) the epithet Parākrama, whose body was most charming, being covered
+        over with the plenteous beauty of the marks of hundreds of promiscuous scars, caused by battle-axes, arrows, spikes
+        (śaṅku), spears (śakti), barbed darts (prāsa), swords, iron clubs (tōmara), javelins for throwing (bhindipāla), barbed
+        arrows (nārācha), span-long arrows (vaitastika) and many other weapons.
+        Whose magnanimity blended with valour was caused by (his) first capturing, and thereafter showing the favour of
+        releasing, all the kings of Dakshiṇāpatha such as Mahēndra of Kōsala, Vyāghrarāja of Mahākāntāra, Maṇṭarāja of Kurāḷa,
+        Mahēndragiri of Pishṭapura, Svāmidatta of Kōṭṭūra, Damana of Ēraṇḍapalla, Vishṇugōpa of Kāñchī, Nīlarāja of Avamukta,
+        Hastivarman of Vēṅgī, Ugrasēna of Pālakka, Kubēra of Dēvarāshṭra, and Dhanañjaya of Kusthalapura.[26]: 145 
+        (Who) is great through the extraordinary valour, namely, the forcible extermination of many kings of Āryāvarta such as
+        Rudradēva, Matila, Nāgadatta, Chandravarman, Gaṇapatināga, Nāgasēna, Āchyuta-Nandin and Balavarman; who has made all the
+        kings of the forest regions to become his servants.
+        (Whose) formidable rule was propitiated with the payment of all tributes, execution of orders and visits (to his court)
+        for obeisance by such frontier rulers as those of Samataṭa, Ḍavāka, Kāmarūpa, Nēpāla, and Kartṛipura, and, by the
+        Mālavas, Ārjunāyanas, Yaudhēyas, Mādrakas, Ābhīras, Prārjunas, Sanakānīkas, Kākas, Kharaparikas and other
+        (tribes)."[26]: 142 
+        (Whose) fame has tired itself with a journey over the whole world caused by the restoration of many fallen kingdoms and
+        overthrown royal families.
+        The unimpeded flow (prasara) of the prowess of (whose) arm (was arrested) by an earth embankment (dharaṇi-bandha) put up
+        by means of service through such measures as self-surrender, offering (their own) daughters in marriage and a request
+        for the administration of their own districts and provinces through the Garuḍa badge, by the
+        Dēvaputra-Shāhi-Shāhānushāhi[31] and the Śaka lords and by (rulers) occupying all Island countries, such as
+        Siṁhala[26]: 149  and others.
+        He was without an antagonist on earth; he, by the overflowing of the multitude of (his) many good qualities adorned by
+        hundreds of good actions, has wiped off the fame of other kings with the soles of (his) feet; (he is) Purusha (Supreme
+        Being), being the cause of the prosperity of the good and the destruction of the bad (he is) incomprehensible; (he is)
+        one whose tender heart can be captured only by devotion and humility; (he is) possessed of compassion; (he is) the giver
+        of many hundred-thousands of cows; (his) mind has received ceremonial initiation for the uplift of the miserable, the
+        poor, the forlorn and the suffering; (he is) resplendent and embodied kindness to mankind; (he is) equal to (the gods)
+        Kubēra, Varuṇa, Indra and Yama; (his) Āyukta officers are always engaged upon restoring wealth (titles, territories,
+        etc.) to the many kings conquered by the might of his arms.
+        (He) has put to shame Bṛihaspati by (his) sharp and polished intellect, as also Tumburu, Nārada and others by the graces
+        of his musical performances; (his) title of "King of Poets" has been established through (his) many compositions in
+        poetry which were a means of subsistence to the learned people; (his) many wonderful and noble deeds are fit to be
+        praised for a very long time; (he is) a human being, only as far as he performs the rites and conventions of the world,
+        (otherwise he is) God whose residence is (this) world.
+        This lofty column, (is) the raised arm of the earth, proclaiming as it were, that the fame having pervaded the entire
+        surface of the world with (its) rise caused by the conquest of the whole earth, has acquired an easy and graceful
+        movement in that it has repaired from here (i.e. from this world) to the abode of (Indra) the lord of the gods—(the
+        fame) of that prosperous Samudragupta the Mahārājādhirāja, son of the prosperous Chandragupta (I), the Mahārājādhirāja,
+        born of the Mahādēvī Kumāradēvī, (and) daughter's son of the Lichchhavi, son's son of the prosperous Ghaṭōtkacha, the
+        Mahārāja and the son of the son's son of the prosperous Gupta, the Mahārāja. Whose
+        fame, ever ascending higher and higher masses, and travelling by many paths, (namely) by liberality, prowess of arm,
+        sobriety and utterance of scriptural texts, purifies the three worlds, like the white water of the (holy river) Gaṅgā,
+        dashing forth rapidly when liberated from the confinement in the inner hollow of the matted hair of Paśupati, (which
+        rises up in ever higher and higher masses and flows through many paths).
+        And may this poetic composition (kāvya) of Harishēṇa, the servant of the very same venerable Bhaṭṭāraka, whose mind has
+        been enlightened through the favour of dwelling near (him), who is the Sāndhivigrahika, Kumārāmātya (and)
+        Mahādaṇḍanāyaka, (and who is) a native of Khādyaṭapāka, and son of the Mahādaṇḍanāyaka Dhruvabhūti, lead to the welfare
+        and happiness of all beings!
+        and (it) was executed by the Mahādaṇḍanāyaka Tilabhaṭṭaka who meditates on the feet of the Paramabhaṭṭāraka.
+      </p>
+      
+
+    </div>
+    <div class="md:w-1/2">
+      <img src="{{baseURL}}/media/{{inscriptionDetail.inscription_image}}" alt="" class="mx-auto md:my-5 w-full rounded-lg">
+      <div class="my-5">
+        <table class="table-auto w-full">
+          <tbody>
+            <tr class="border-y">
+              <td>Ruler/Person</td>
+              <td>{{inscriptionDetail.person}}</td>
+            </tr>
+            <tr class="border-b">
+              <td>Language</td>
+              <td>{{inscriptionDetail.langauge}}</td>
+            </tr>
+            <tr class="border-b">
+              <td>Script</td>
+              <td>{{inscriptionDetail.script}}</td>
+            </tr>
+            <tr class="border-b">
+              <td>Location</td>
+              <td>{{inscriptionDetail.location}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
   </div>
   
 </section>

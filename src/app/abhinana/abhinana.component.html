@@ -4,10 +4,10 @@
     <h6>Curious about what is written on that wall?<br> Just take a snap and figure it out right away👇🏻</h6>
   </div>
   <div class="buttons">
-    <button routerLink="/scan">Scan Photo</button>
+    <button routerLink="/scan" class="transition-all ease-in-out duration-200 hover:shadow-lg hover:-translate-y-1">Scan Photo</button>
     <form class="w-full md:max-w-xs flex flex-col items-center">
       <input type="file" (change)="onFileChanged($event)" style="display: none;" #fileInput>
-      <button (click)="fileInput.click()" *ngIf="!selectedFile">Upload Photo</button>
+      <button (click)="fileInput.click()" *ngIf="!selectedFile" class="transition-all ease-in-out duration-200 hover:shadow-lg hover:-translate-y-1">Upload Photo</button>
       <!-- <button (click)="onUpload()" *ngIf="selectedFile">Upload</button> -->
     </form>
   </div>
